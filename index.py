@@ -9,8 +9,8 @@ API_TOKEN = st.secrets["api_key"]
 headers = {"Authorization": f"Bearer {API_TOKEN}"}
  
 st.header("🤖ks's BlenderBot (Demo)")
-st.header("Disclaimer: AI의 법률조언에 대해 책임지지 않습니다. 정확한 상담은 info@schunglaw.com 으로 예약의뢰 하시면 됩니다.  ")
-st.markdown("[referrence](https://yunwoong.tistory.com/)")
+st.header("Disclaimer: AI의 법률조언에 대해 책임지지 않습니다. 정확한 상담은 info@schunglaw.com 으로 예약하시면 됩니다.  ")
+st.markdown("[referrence Chung & Associates](https://schunglaw.com//)")
  
 if 'generated' not in st.session_state:
     st.session_state['generated'] = []
@@ -38,7 +38,8 @@ if submitted and user_input:
     })
  
     st.session_state.past.append(user_input)
-    st.session_state.generated.append(output["generated_text"])
+    with st.spinner("waiting for response..."):
+        st.session_state.generated.append(output["generated_text"])
  
 if st.session_state['generated']:
     for i in range(len(st.session_state['generated'])-1, -1, -1):
