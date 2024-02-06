@@ -8,8 +8,8 @@ API_TOKEN = st.secrets["api_key"]
 
 headers = {"Authorization": f"Bearer {API_TOKEN}"}
  
-st.header("🤖Yunwoong's BlenderBot (Demo)")
-st.markdown("[Be Original](https://yunwoong.tistory.com/)")
+st.header("🤖ks's BlenderBot (Demo)")
+st.markdown("[referrence](https://yunwoong.tistory.com/)")
  
 if 'generated' not in st.session_state:
     st.session_state['generated'] = []
