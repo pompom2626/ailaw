@@ -3,8 +3,8 @@ from streamlit_chat import message
 import requests
  
 API_URL = "https://api-inference.huggingface.co/models/facebook/blenderbot-400M-distill"
-#API_TOKEN = st.secrets["api_key"]
-API_TOKEN = "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"
+API_TOKEN = st.secrets["api_key"]
+
 
 headers = {"Authorization": f"Bearer {API_TOKEN}"}
  
