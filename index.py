@@ -10,7 +10,7 @@ headers = {"Authorization": f"Bearer {API_TOKEN}"}
  
 st.header("🤖ks's BlenderBot (Demo)")
 st.header("Disclaimer: AI의 법률조언에 대해 책임지지 않습니다. 정확한 상담은 info@schunglaw.com 으로 예약하시면 됩니다.  ")
-st.markdown("[referrence Chung & Associates](https://schunglaw.com//)")
+st.markdown("[referrence Chung & Associates](https://schunglaw.com)")
  
 if 'generated' not in st.session_state:
     st.session_state['generated'] = []
